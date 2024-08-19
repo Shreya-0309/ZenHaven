@@ -1,0 +1,150 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #003366; /* Deep Blue */
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* Header */
+header {
+  background-color: #E6E6FA; /* Lavender */
+  padding: 10px 0;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+}
+
+.nav-left .logo {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.nav-left .logo img {
+  height: 50px; /* Adjust based on your logo's dimensions */
+  width: auto; /* Maintain aspect ratio */
+}
+
+.nav-left h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: #003366; /* Deep Blue */
+  text-decoration: none;
+  font-size: 1em;
+}
+
+nav ul li a:hover {
+  color: #ADD8E6; /* Light Blue */
+}
+
+/* Hero Section */
+.hero {
+  background-image: url('WhatsApp Image 2024-08-18 at 17.07.44_ebdd423f.jpg'); /* Add your image path */
+  background-size: cover;
+  background-position: center;
+  color: #FFFFFF; /* White */
+  text-align: center;
+  padding: 100px 20px;
+  position: relative;
+}
+
+.hero-content {
+  background-color: rgba(0, 51, 102, 0.5); /* Deep Blue with opacity */
+  padding: 20px;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+.cta-button {
+  background-color: #98FB98; /* Soft Green */
+  color: #003366; /* Deep Blue */
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+/* Benefits Section */
+.benefits {
+  background-color: #FFFFFF; /* White */
+  padding: 40px 20px;
+}
+
+/* Services Section */
+.services {
+  background-color: #E0FFFF; /* Soft Blue */
+  padding: 40px 20px;
+}
+
+.services .service-card {
+  background-color: #F0E6F6; /* Light Lavender */
+  padding: 20px;
+  border-radius: 10px;
+  margin: 10px;
+  display: inline-block;
+  width: 30%;
+}
+
+/* Testimonials Section */
+.testimonials {
+  background-color: #F5FFFA; /* Light Green */
+  padding: 40px 20px;
+}
+
+.testimonials .quote-box {
+  background-color: #E6E6FA; /* Light Lavender */
+  padding: 20px;
+  border: 1px solid #003366; /* Deep Blue */
+  border-radius: 10px;
+  margin: 10px 0;
+}
+
+/* Footer */
+footer {
+  background-color: #003366; /* Deep Blue */
+  color: #FFFFFF; /* White */
+  padding: 20px 0;
+  text-align: center;
+}
+
+.social-media {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.social-media li {
+  display: inline;
+  margin: 0 10px;
+}
+
+.social-media li a {
+  color: #E6E6FA; /* Light Lavender */
+}
