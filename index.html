@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stress Calmness Music Player</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Meditation Zone</h1>
+    </header>
+    <div class="container">
+        <div class="music-option" onclick="playMusic('mixkit-calm-thunderstorm-in-the-jungle-2415.wav')">
+            <img src="rain.jpg" alt="Music Option 1">
+        </div>
+        <div class="music-option" onclick="playMusic('mixkit-campfire-night-wind-1736.wav')">
+            <img src="fire.jpeg" alt="Music Option 2">
+        </div>
+        <div class="music-option" onclick="playMusic('mixkit-waterfall-flowing-water-2518.wav')">
+            <img src="waterfall.jpeg" alt="Music Option 3">
+        </div>
+        <div class="music-option" onclick="playMusic('mixkit-morning-birds-singing-2467.wav')">
+            <img src="birds.jpeg" alt="Music Option 4">
+        </div>
+    </div>
+    <audio id="audio-player" controls></audio>
+    <script src="script.js"></script>
+</body>
+</html>
