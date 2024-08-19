@@ -12,11 +12,11 @@
             <div class="container">
                 <div class="nav-left">
                     <a href="#" class="logo">
-                        <img src="WhatsApp Image 2024-08-18 at 17.07.44_ebdd423f.jpg" alt="ZenHaven Logo"> <!-- Replace with your logo image path -->
+                        <img src="ZenHaven - logo.png" alt="ZenHaven Logo"> 
                     </a>
                     <h1>ZenHaven</h1>
                 </div>
-                <ul>
+                <ul class="nav-right">
                     <li><a href="#">Home</a></li>
                     <li><a href="#">About</a></li>
                     <li><a href="#">Services</a></li>
@@ -35,21 +35,39 @@
     <section class="benefits">
         <div class="container">
             <h2>Benefits of ZenHaven</h2>
-            <!-- Add your content here -->
         </div>
     </section>
     <section class="services">
         <div class="container">
             <h2>Our Services</h2>
-            <!-- Add your content here -->
         </div>
     </section>
     <section class="testimonials">
         <div class="container">
-            <h2>Testimonials</h2>
-            <!-- Add your content here -->
+            <h2><div class="black-background">Testimonials</div></h2>
+            <div class="testimonial-carousel-container">
+                <button class="prev" onclick="moveLeft()">&#10094;</button>
+                <div class="testimonial-carousel">
+                    <div class="testimonial-box"><div class="testimonial"><h2><b>"ZenHaven changed my life!" - Jane D.</b><p>⭐⭐⭐⭐⭐</p></h2></div></div>
+                    <div class="testimonial-box"><div class="testimonial"><h2><b>"Amazing service!" - John S.</b><p>⭐⭐⭐⭐⭐</p></div></div>
+                    <div class="testimonial-box"><div class="testimonial"><h2><b>"I feel so much more relaxed." - Sarah T.</b><p>⭐⭐⭐⭐⭐</p></div></div>
+                    <div class="testimonial-box"><div class="testimonial"><h2><b>"Highly recommended!" - Mike R.</b><p>⭐⭐⭐⭐⭐</p></div></div>
+                    <div class="testimonial-box"><div class="testimonial"><h2><b>"A sanctuary for the soul." - Emma B.</b><p>⭐⭐⭐⭐⭐</p></div></div>
+                    <div class="testimonial-box"><div class="testimonial"><h2><b>"Incredible experience." - David K.</b><p>⭐⭐⭐⭐⭐</p></div></div>
+                    <div class="testimonial-box"><div class="testimonial"><h2><b>"A calming retreat." - Lisa M.</b><p>⭐⭐⭐⭐⭐</p></div></div>
+                    <div class="testimonial-box"><div class="testimonial"><h2><b>"Best decision I ever made." - Mark L.</b><p>⭐⭐⭐⭐⭐</p></div></div>
+                    <div class="testimonial-box"><div class="testimonial"><h2><b>"Five stars!" - Rachel P.</b><p>⭐⭐⭐⭐⭐</p></div></div>
+                    <div class="testimonial-box"><div class="testimonial"><h2><b>"Truly transformative." - George W.</b><p>⭐⭐⭐⭐</p></div></div>
+                    
+                </div>
+                <button class="next" onclick="moveRight()">&#10095;</button>
+            </div>
         </div>
     </section>
+    
+    
+    
+    
     <footer>
         <div class="container">
             <p>&copy; 2024 ZenHaven. All rights reserved.</p>
@@ -60,5 +78,6 @@
             </ul>
         </div>
     </footer>
+    <script src="homepage.js"></script>
 </body>
 </html>
