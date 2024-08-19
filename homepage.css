@@ -2,48 +2,61 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  color: #003366; /* Deep Blue */
+  color: #64766A;
+}
+
+.black-background {
+  background-color: white;
+  color: black;
+  border-radius: 20px;
 }
 
 .container {
   width: 80%;
   margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Space between the left and right content */
 }
 
 /* Header */
 header {
-  background-color: #E6E6FA; /* Lavender */
-  padding: 10px 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  background-color: transparent; /* Make the header background transparent */
 }
 
 nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0px; /* Adjusted padding */
+  background-color: rgba(100, 118, 106, 0.8); /* Slightly transparent background for nav */
+  border-radius: 0 0 10px 10px; /* Rounded bottom corners */
 }
 
 .nav-left {
   display: flex;
-  align-items: center;
-}
-
-.nav-left .logo {
-  display: flex;
-  align-items: center;
-  margin-right: 10px;
+  align-items: center; /* Aligns items vertically centered */
 }
 
 .nav-left .logo img {
-  height: 50px; /* Adjust based on your logo's dimensions */
-  width: auto; /* Maintain aspect ratio */
+  height: 100px; /* Adjusted logo size */
+  width: auto;
+  margin-right: 10px; /* Space between logo and site name */
 }
 
 .nav-left h1 {
   margin: 0;
-  font-size: 2em;
+  font-size: 1.8em;
+  color: #F4F3F2; /* Light color for text */
+  white-space: nowrap; /* Prevent line breaks in the site name */
 }
 
-nav ul {
+.nav-right {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -51,60 +64,66 @@ nav ul {
   align-items: center;
 }
 
-nav ul li {
-  margin-left: 20px;
+.nav-right li {
+  margin-left: 20px; /* Space between nav links */
 }
 
-nav ul li a {
-  color: #003366; /* Deep Blue */
+.nav-right li a {
+  color: #F4F3F2; /* Light color for text */
   text-decoration: none;
   font-size: 1em;
 }
 
-nav ul li a:hover {
-  color: #ADD8E6; /* Light Blue */
+.nav-right li a:hover {
+  color: #C0A9BD; /* Hover color */
 }
 
 /* Hero Section */
 .hero {
-  background-image: url('WhatsApp Image 2024-08-18 at 17.07.44_ebdd423f.jpg'); /* Add your image path */
+  background-image: url('istockphoto-480975194-612x612.jpg'); /* Your image path */
   background-size: cover;
   background-position: center;
   color: #FFFFFF; /* White */
   text-align: center;
-  padding: 100px 20px;
+  padding: 200px 20px;  /*Adjusted padding to make space for the nav */
   position: relative;
+  z-index: 5; /* Ensure hero content is below the header */
 }
 
 .hero-content {
-  background-color: rgba(0, 51, 102, 0.5); /* Deep Blue with opacity */
+  background-color: rgba(100, 118, 106, 0.8); /* Updated color with opacity */
   padding: 20px;
   border-radius: 10px;
   display: inline-block;
 }
 
 .cta-button {
-  background-color: #98FB98; /* Soft Green */
-  color: #003366; /* Deep Blue */
+  background-color: #C0A9BD; /* Updated button color */
+  color: #F4F3F2; /* Updated text color */
   padding: 10px 20px;
   border-radius: 5px;
   font-weight: bold;
+  text-decoration: none;
+}
+
+.cta-button:hover {
+  background-color: #94A7AE; /* Hover button color */
 }
 
 /* Benefits Section */
 .benefits {
-  background-color: #FFFFFF; /* White */
+  background-color: #F4F3F2; /* Updated background color */
   padding: 40px 20px;
 }
 
 /* Services Section */
 .services {
-  background-color: #E0FFFF; /* Soft Blue */
+  background-color: #C0A9BD; /* Updated background color */
   padding: 40px 20px;
 }
 
 .services .service-card {
-  background-color: #F0E6F6; /* Light Lavender */
+  background-color: #94A7AE; /* Updated card background */
   padding: 20px;
   border-radius: 10px;
   margin: 10px;
@@ -114,37 +133,97 @@ nav ul li a:hover {
 
 /* Testimonials Section */
 .testimonials {
-  background-color: #F5FFFA; /* Light Green */
+  background-color: #64766A;
   padding: 40px 20px;
+  color: #F4F2F3;
+  text-align: center;
+  background-image: url('testimonial-background2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.testimonials .quote-box {
-  background-color: #E6E6FA; /* Light Lavender */
-  padding: 20px;
-  border: 1px solid #003366; /* Deep Blue */
-  border-radius: 10px;
-  margin: 10px 0;
+.testimonials h2 {
+  margin-bottom: 20px;
 }
+
+/* Container to hold carousel and buttons */
+.testimonial-carousel-container {
+  position: relative;
+  max-width: 80%; /* Limit width to avoid stretching */
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 100px;
+}
+
+/* Carousel Wrapper */
+.testimonial-carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 1000%; /* Adjusted width for horizontal scrolling */
+}
+
+/* Each testimonial box */
+.testimonial-box {
+  flex: 0 0 100%; /* Occupy full width of container */
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.testimonial {
+  /*background-color: #C0A9BD;*/
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #64766A;
+  
+}
+
+/* Navigation Buttons */
+button.prev, button.next {
+  background-color: #F4F3F2;
+  border: none;
+  font-size: 2em;
+  color: #64766A;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+button.prev {
+  left: 0;
+}
+
+button.next {
+  right: 0;
+}
+
+button.prev:hover, button.next:hover {
+  color: #F4F3F2;
+  background-color: #64766A;
+}
+
+
 
 /* Footer */
 footer {
-  background-color: #003366; /* Deep Blue */
-  color: #FFFFFF; /* White */
+  background-color: #64766A; /* Updated background color */
+  color: #F4F3F2; /* Updated text color */
   padding: 20px 0;
   text-align: center;
 }
 
-.social-media {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.social-media li {
-  display: inline;
-  margin: 0 10px;
-}
-
 .social-media li a {
-  color: #E6E6FA; /* Light Lavender */
+  color: #F4F3F2; /* Updated link color */
 }
