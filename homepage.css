@@ -1,8 +1,8 @@
 /* General Styles */
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
   color: #64766A;
+  font-family: 'Lato', sans-serif;
 }
 
 .black-background {
@@ -83,6 +83,8 @@ nav {
   background-image: url('istockphoto-480975194-612x612.jpg'); /* Your image path */
   background-size: cover;
   background-position: center;
+  height: 33vh;
+
   color: #FFFFFF; /* White */
   text-align: center;
   padding: 200px 20px;  /*Adjusted padding to make space for the nav */
@@ -116,6 +118,101 @@ nav {
   padding: 40px 20px;
 }
 
+.zenhaven-container {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.zenhaven-benefits {
+  background-color: #F4F3F2;
+  padding: 40px 20px;
+}
+
+.zenhaven-title {
+  font-family: 'Lato', sans-serif;
+  color: #2c3e50;
+  margin-bottom: 40px;
+}
+
+.benefit-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 100%;
+}
+
+.card {
+  perspective: 1000px;
+  max-width: 300px; /* Ensure cards do not exceed this width */
+  height: 300px; /* Fixed height for consistent size */
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%; /* Maintain 1:1 aspect ratio */
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+.card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.card-front {
+  background-color: white;
+  display: inline;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.card-front img {
+  object-fit: cover; /* Ensure images cover the container */
+  width: 100%;
+  height: auto;
+  border-bottom: 2px solid #f4f3f2;
+}
+
+.card-front h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  margin: 15px 0;
+  color: #2c3e50;
+}
+
+.card-back {
+  background-color: white;
+  color: black;
+  transform: rotateY(180deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-image: url('card_back.jpg');
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+}
+
+
+
 /* Services Section */
 .services {
   background-color: #C0A9BD; /* Updated background color */
@@ -131,7 +228,85 @@ nav {
   width: 30%;
 }
 
+
+
+/* About Us */
+
+.about-us {
+  display: flex;
+  align-items: center;
+  height: 70vh;
+  width: 100%;
+  padding: 90px 0;
+  background: #fff;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+}
+.pic {
+  height: 90vh;
+  width: 400px;
+  border-radius: 12px;
+}
+.about {
+  width: 1130px;
+  max-width: 85%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.text {
+  width: 540px;
+}
+.text h2 {
+  color: #64766A;
+  font-size: 90px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.text h5 {
+  color: #94A7AE;
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 20px;
+
+  background-color: white;
+  border-radius: 20px;
+  padding: 10px;
+  color: black;
+}
+span {
+  color: #d191c9;
+}
+.text p {
+  background-color: white;
+  border-radius: 20px;
+  padding: 10px;
+  color: black;
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: 1px;
+}
+.data {
+  margin-top: 30px;
+}
+.hire {
+  font-size: 18px;
+  background: #8e6286;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 6px;
+  transition: 0.5s;
+}
+.hire:hover {
+  background: #000;
+}
+
 /* Testimonials Section */
+
 .testimonials {
   background-color: #64766A;
   padding: 40px 20px;
