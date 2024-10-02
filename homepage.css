@@ -1,59 +1,82 @@
-/* General Styles */
 body {
   margin: 0;
-  color: #64766A;
   font-family: 'Lato', sans-serif;
 }
 
-.black-background {
-  background-color: white;
-  color: black;
-  border-radius: 20px;
-}
-
-.container {
-  width: 80%;
-  margin: 0 auto;
+/* Color Scheme Toggle */
+.color-scheme-toggle {
+  position: fixed; /* Ensure the buttons stay on the screen even when scrolling */
+  top: 10px;
+  right: 10px;
+  z-index: 1000; /* Ensure buttons are on top of other elements */
   display: flex;
-  align-items: center;
-  justify-content: space-between; /* Space between the left and right content */
+  gap: 10px;
 }
 
-/* Header */
+.contrast-button {
+  padding: 10px 20px;
+  background-color: #64766A;
+  color: #F4F3F2;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.contrast-button:hover {
+  background-color: #C0A9BD;
+}
+
+/* Color Schemes */
+body.low-contrast {
+  background-color: #F4F3F2;
+  color: #64766A;
+}
+
+body.medium-contrast {
+  background-color: #C0A9BD;
+  color: #2C3E50;
+}
+
+body.high-contrast {
+  background-color: #000000;
+  color: #FFFFFF;
+}
+
+/* Header and Navigation */
 header {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 10;
-  background-color: transparent; /* Make the header background transparent */
+  background-color: transparent;
 }
 
 nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0px; /* Adjusted padding */
-  background-color: rgba(100, 118, 106, 0.8); /* Slightly transparent background for nav */
-  border-radius: 0 0 10px 10px; /* Rounded bottom corners */
+  padding: 0px;
+  background-color: rgba(100, 118, 106, 0.8);
+  border-radius: 0 0 10px 10px;
 }
 
 .nav-left {
   display: flex;
-  align-items: center; /* Aligns items vertically centered */
+  align-items: center;
 }
 
 .nav-left .logo img {
-  height: 100px; /* Adjusted logo size */
+  height: 100px;
   width: auto;
-  margin-right: 10px; /* Space between logo and site name */
+  margin-right: 10px;
 }
 
 .nav-left h1 {
   margin: 0;
   font-size: 1.8em;
-  color: #F4F3F2; /* Light color for text */
-  white-space: nowrap; /* Prevent line breaks in the site name */
+  color: #F4F3F2;
 }
 
 .nav-right {
@@ -65,17 +88,33 @@ nav {
 }
 
 .nav-right li {
-  margin-left: 20px; /* Space between nav links */
+  margin-left: 20px;
 }
 
 .nav-right li a {
-  color: #F4F3F2; /* Light color for text */
+  color: #F4F3F2;
   text-decoration: none;
   font-size: 1em;
 }
 
 .nav-right li a:hover {
-  color: #C0A9BD; /* Hover color */
+  color: #C0A9BD;
+}
+
+/* Color schemes for navigation */
+.low-contrast nav, .low-contrast .nav-right li a {
+  background-color: #DDE6E6;
+  color: #64766A;
+}
+
+.medium-contrast nav, .medium-contrast .nav-right li a {
+  background-color: #C0A9BD;
+  color: #2C3E50;
+}
+
+.high-contrast nav, .high-contrast .nav-right li a {
+  background-color: #000000;
+  color: #FFFFFF;
 }
 
 /* Hero Section */
@@ -84,10 +123,9 @@ nav {
   background-size: cover;
   background-position: center;
   height: 33vh;
-
   color: #FFFFFF; /* White */
   text-align: center;
-  padding: 200px 20px;  /*Adjusted padding to make space for the nav */
+  padding: 200px 20px;  /* Adjusted padding to make space for the nav */
   position: relative;
   z-index: 5; /* Ensure hero content is below the header */
 }
@@ -211,8 +249,6 @@ nav {
   font-size: 16px;
 }
 
-
-
 /* Services Section */
 .services {
   background-color: #C0A9BD; /* Updated background color */
@@ -228,10 +264,7 @@ nav {
   width: 30%;
 }
 
-
-
 /* About Us */
-
 .about-us {
   display: flex;
   align-items: center;
@@ -243,11 +276,13 @@ nav {
   background-size: cover;
   text-align: center;
 }
+
 .pic {
   height: 90vh;
   width: 400px;
   border-radius: 12px;
 }
+
 .about {
   width: 1130px;
   max-width: 85%;
@@ -256,29 +291,33 @@ nav {
   align-items: center;
   justify-content: space-around;
 }
+
 .text {
   width: 540px;
 }
+
 .text h2 {
   color: #64766A;
   font-size: 90px;
   font-weight: 600;
   margin-bottom: 10px;
 }
+
 .text h5 {
   color: #94A7AE;
   font-size: 22px;
   font-weight: 500;
   margin-bottom: 20px;
-
   background-color: white;
   border-radius: 20px;
   padding: 10px;
   color: black;
 }
+
 span {
   color: #d191c9;
 }
+
 .text p {
   background-color: white;
   border-radius: 20px;
@@ -288,9 +327,11 @@ span {
   line-height: 25px;
   letter-spacing: 1px;
 }
+
 .data {
   margin-top: 30px;
 }
+
 .hire {
   font-size: 18px;
   background: #8e6286;
@@ -301,12 +342,12 @@ span {
   border-radius: 6px;
   transition: 0.5s;
 }
+
 .hire:hover {
   background: #000;
 }
 
 /* Testimonials Section */
-
 .testimonials {
   background-color: #64766A;
   padding: 40px 20px;
@@ -321,17 +362,12 @@ span {
   margin-bottom: 20px;
 }
 
-/* Container to hold carousel and buttons */
 .testimonial-carousel-container {
   position: relative;
-  max-width: 80%; /* Limit width to avoid stretching */
+  max-width: 80%; /* Limit width of the carousel */
   margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  border-radius: 100px;
 }
+
 
 /* Carousel Wrapper */
 .testimonial-carousel {

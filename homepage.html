@@ -8,6 +8,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;500&family=Lato:wght@300;400&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="color-scheme-toggle">
+        <button class="contrast-button" data-scheme="low-contrast">Low Contrast</button>
+        <button class="contrast-button" data-scheme="medium-contrast">Medium Contrast</button>
+        <button class="contrast-button" data-scheme="high-contrast">High Contrast</button>
+    </div>
     <header>
         <nav>
             <div class="container">
@@ -51,7 +56,7 @@
     
     
 
-    <section class="zenhaven-benefits" id="benefits">
+      <section class="zenhaven-benefits" id="benefits">
         <div class="zenhaven-container">
             <h2 class="zenhaven-title">Our Benefits</h2>
             <div class="benefit-cards">
@@ -62,11 +67,12 @@
                             <h3>Stress Reduction</h3>
                         </div>
                         <div class="card-back">
-                            <p>
+                            <p id="stress-reduction">
                                 Practice daily meditation.<br><br>
                                 Use deep breathing techniques.<br><br>
                                 Try relaxation exercises.
                             </p>
+                            <button onclick="speakText('stress-reduction')">🔊 Play Audio</button>
                         </div>
                     </div>
                 </div>
@@ -77,11 +83,12 @@
                             <h3>Improved Mental Clarity</h3>
                         </div>
                         <div class="card-back">
-                            <p>
+                            <p id="mental-clarity">
                                 Meditate regularly for focus.<br><br>
-                                Prioritize mindfulness throughout day.<br><br>
+                                Prioritize mindfulness throughout the day.<br><br>
                                 Set clear, manageable goals.
                             </p>
+                            <button onclick="speakText('mental-clarity')">🔊 Play Audio</button>
                         </div>
                     </div>
                 </div>
@@ -92,11 +99,12 @@
                             <h3>Enhanced Well-Being</h3>
                         </div>
                         <div class="card-back">
-                            <p>
+                            <p id="wellbeing">
                                 Balance physical, mental, emotional.<br><br>
                                 Incorporate holistic wellness practices.<br><br>
                                 Engage in self-care routines.
                             </p>
+                            <button onclick="speakText('wellbeing')">🔊 Play Audio</button>
                         </div>
                     </div>
                 </div>
@@ -107,11 +115,12 @@
                             <h3>Better Sleep Quality</h3>
                         </div>
                         <div class="card-back">
-                            <p>
+                            <p id="better-sleep-quality">
                                 Establish a sleep schedule.<br><br>
                                 Practice bedtime relaxation rituals.<br><br>
                                 Avoid screens before bed.
                             </p>
+                            <button onclick="speakText('better-sleep-quality')">🔊 Play Audio</button>
                         </div>
                     </div>
                 </div>
@@ -122,11 +131,12 @@
                             <h3>Increased Mindfulness</h3>
                         </div>
                         <div class="card-back">
-                            <p>
+                            <p id="increased-mindfulness">
                                 Focus on present moments.<br><br>
                                 Practice gratitude daily.<br><br>
                                 Engage in mindful activities.
                             </p>
+                            <button onclick="speakText('increased-mindfulness')">🔊 Play Audio</button>
                         </div>
                     </div>
                 </div>
@@ -137,11 +147,12 @@
                             <h3>Personalized Wellness</h3>
                         </div>
                         <div class="card-back">
-                            <p>
+                            <p id="personalized-wellness">
                                 Customize wellness routines.<br><br>
                                 Set personal health goals.<br><br>
                                 Explore various wellness methods.
                             </p>
+                            <button onclick="speakText('personalized-wellness')">🔊 Play Audio</button>
                         </div>
                     </div>
                 </div>
