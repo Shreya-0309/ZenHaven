@@ -348,6 +348,7 @@ span {
 }
 
 /* Testimonials Section */
+
 .testimonials {
   background-color: #64766A;
   padding: 40px 20px;
@@ -362,12 +363,17 @@ span {
   margin-bottom: 20px;
 }
 
+/* Container to hold carousel and buttons */
 .testimonial-carousel-container {
   position: relative;
-  max-width: 80%; /* Limit width of the carousel */
+  max-width: 80%; /* Limit width to avoid stretching */
   margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 100px;
 }
-
 
 /* Carousel Wrapper */
 .testimonial-carousel {

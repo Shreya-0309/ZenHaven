@@ -1,5 +1,32 @@
 // Carousel functionality
 let currentIndex = 0;
+document.addEventListener("DOMContentLoaded", function () {
+    // Get the buttons
+    const lowContrastBtn = document.getElementById("low-contrast");
+    const mediumContrastBtn = document.getElementById("medium-contrast");
+    const highContrastBtn = document.getElementById("high-contrast");
+
+    // Add event listeners to buttons
+    lowContrastBtn.addEventListener("click", function () {
+        setContrast('low-contrast');
+    });
+
+    mediumContrastBtn.addEventListener("click", function () {
+        setContrast('medium-contrast');
+    });
+
+    highContrastBtn.addEventListener("click", function () {
+        setContrast('high-contrast');
+    });
+
+    // Function to set contrast mode
+    function setContrast(mode) {
+        // Remove all contrast classes
+        document.body.classList.remove("low-contrast", "medium-contrast", "high-contrast");
+        // Add the selected contrast class
+        document.body.classList.add(mode);
+    }
+});
 
 function moveLeft() {
     const testimonials = document.querySelectorAll('.testimonial-box');
