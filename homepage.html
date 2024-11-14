@@ -28,7 +28,6 @@
                     <li><a href="#about">About</a></li>
                     <li><a href="#">Services</a></li>
                     <li><a href="#">Contact</a></li>
-                    <li><a href="Forum.html">Forum</a></li>
                 </ul>
             </div>
         </nav>
@@ -69,12 +68,21 @@
                             <h3>Stress Reduction</h3>
                         </div>
                         <div class="card-back">
+
                             <p id="stress-reduction">
                                 Practice daily meditation.<br><br>
                                 Use deep breathing techniques.<br><br>
-                                Try relaxation exercises.
+                                Try relaxation exercises.<br><br>
+                                <button onclick="playAudio1()">🔊 Play Audio</button>
                             </p>
-                            <button onclick="speakText('stress-reduction')">🔊 Play Audio</button>
+                            <audio id="stress-audio" src="stress_reduction_a.mp3" type="audio/mp3"></audio>
+                            <script>
+                            function playAudio1() {
+                                const audio = document.getElementById('stress-audio');
+                                audio.play();
+                            }
+                            </script>
+                            
                         </div>
                     </div>
                 </div>
@@ -88,9 +96,17 @@
                             <p id="mental-clarity">
                                 Meditate regularly for focus.<br><br>
                                 Prioritize mindfulness throughout the day.<br><br>
-                                Set clear, manageable goals.
+                                Set clear, manageable goals. <br> <br>
+                                <button onclick="playAudio2()">🔊 Play Audio</button>
                             </p>
-                            <button onclick="speakText('mental-clarity')">🔊 Play Audio</button>
+                            <audio id="imca" src="improved_mental_clarity_a.mp3" type="audio/mp3"></audio>
+                            <script>
+                            function playAudio2() {
+                                const audio = document.getElementById('imca');
+                                audio.play();
+                            }
+                            </script>
+                            
                         </div>
                     </div>
                 </div>
@@ -104,9 +120,17 @@
                             <p id="wellbeing">
                                 Balance physical, mental, emotional.<br><br>
                                 Incorporate holistic wellness practices.<br><br>
-                                Engage in self-care routines.
+                                Engage in self-care routines.<br> <br>
+                                <button onclick="playAudio3()">🔊 Play Audio</button>
                             </p>
-                            <button onclick="speakText('wellbeing')">🔊 Play Audio</button>
+                            <audio id="ewba" src="enhanced_wb_a.mp3" type="audio/mp3"></audio>
+                            <script>
+                            function playAudio3() {
+                                const audio = document.getElementById('ewba');
+                                audio.play();
+                            }
+                            </script>
+                            
                         </div>
                     </div>
                 </div>
@@ -120,9 +144,17 @@
                             <p id="better-sleep-quality">
                                 Establish a sleep schedule.<br><br>
                                 Practice bedtime relaxation rituals.<br><br>
-                                Avoid screens before bed.
+                                Avoid screens before bed.<br> <br>
+                                <button onclick="playAudio4()">🔊 Play Audio</button>
                             </p>
-                            <button onclick="speakText('better-sleep-quality')">🔊 Play Audio</button>
+                            <audio id="bsqa" src="bsq_a.mp3" type="audio/mp3"></audio>
+                            <script>
+                            function playAudio4() {
+                                const audio = document.getElementById('bsqa');
+                                audio.play();
+                            }
+                            </script>
+                            
                         </div>
                     </div>
                 </div>
@@ -136,9 +168,17 @@
                             <p id="increased-mindfulness">
                                 Focus on present moments.<br><br>
                                 Practice gratitude daily.<br><br>
-                                Engage in mindful activities.
+                                Engage in mindful activities.<br> <br>
+                                <button onclick="playAudio5()">🔊 Play Audio</button>
                             </p>
-                            <button onclick="speakText('increased-mindfulness')">🔊 Play Audio</button>
+                            <audio id="ima" src="im_a.mp3" type="audio/mp3"></audio>
+                            <script>
+                            function playAudio5() {
+                                const audio = document.getElementById('ima');
+                                audio.play();
+                            }
+                            </script>
+                            
                         </div>
                     </div>
                 </div>
@@ -152,9 +192,17 @@
                             <p id="personalized-wellness">
                                 Customize wellness routines.<br><br>
                                 Set personal health goals.<br><br>
-                                Explore various wellness methods.
+                                Explore various wellness methods.<br> <br>
+                                <button onclick="playAudio6()">🔊 Play Audio</button>
                             </p>
-                            <button onclick="speakText('personalized-wellness')">🔊 Play Audio</button>
+                            <audio id="pwa" src="pw_a.mp3" type="audio/mp3"></audio>
+                            <script>
+                            function playAudio6() {
+                                const audio = document.getElementById('pwa');
+                                audio.play();
+                            }
+                            </script>
+        
                         </div>
                     </div>
                 </div>
