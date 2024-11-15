@@ -1,0 +1,103 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f0f8ff;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #4B2A77;
+    color: #fff;
+    width: 100%;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2em;
+    margin-top: 5px;
+}
+
+main {
+    padding: 20px;
+    max-width: 1000px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background-color: #ffcccb;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 250px;
+    padding: 20px;
+    color: #333;
+    transition: transform 0.3s;
+}
+
+.card h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #4682b4;
+}
+
+.card p {
+    font-size: 1em;
+    margin-bottom: 15px;
+}
+
+.card ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.card ul li {
+    margin-bottom: 8px;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* Color themes for each card */
+.card:nth-child(odd) {
+    background-color: #c1e1c5;
+}
+
+.card:nth-child(even) {
+    background-color: #ffddc1;
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    .card {
+        width: 100%;
+    }
+}
